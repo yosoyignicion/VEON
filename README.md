@@ -102,6 +102,8 @@ curl -F "file=@animacion.svg" -F "output=webm" http://localhost:3001/api/render
 
 ## 🏗️ Arquitectura
 
+[Breve explicación en audio español](https://notebooklm.google.com/notebook/8e8fd401-a5e5-4b21-b320-76b646f17012/artifact/c7f4fac4-76c9-4fe2-8b86-805d3dec6e86?utm_source=nlm_web_share&utm_medium=google_oo&utm_campaign=art_share_1&utm_content=&utm_smc=nlm_web_share_google_oo_art_share_1)
+
 ```
                     ┌──────────────────┐
                     │   Frontend       │
