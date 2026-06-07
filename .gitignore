@@ -1,0 +1,16 @@
+node_modules/
+dist/
+frontend/dist/
+output/
+frames/
+server/uploads/
+server/veon.db
+server/veon.db-shm
+server/veon.db-wal
+.engram/
+*.log
+.env
+.DS_Store
+*.svg~
+*.tmp
+test-*.mp4

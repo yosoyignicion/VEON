@@ -1,0 +1,35 @@
+# VEON — System Dependencies
+# ============================
+# Core
+node >= 18.0.0
+npm >= 9.0.0
+
+# Video Encoding
+ffmpeg >= 4.4          # H.264, VP9, H.265, APNG, GIF encoding
+ffmpeg -c:v libx264    # MP4/H.264
+ffmpeg -c:v libvpx-vp9 # WebM/VP9
+ffmpeg -c:v libx265    # MP4/HEVC (optional, for H.265 output)
+ffmpeg -c:v apng       # APNG output
+
+# Hardware Acceleration (optional, for 10x faster encoding)
+linux-amd64            # VAAPI-compatible GPU (AMD/Intel)
+/dev/dri/renderD128    # VAAPI device node
+
+# SVG Rendering (SMIL Parser — optional, for faster SVG processing)
+librsvg2-bin           # rsvg-convert CLI (fallback)
+# OR
+@resvg/resvg-js        # npm package (auto-installed)
+
+# Chrome Rendering (fallback for complex SVGs)
+google-chrome-stable   # or chromium-browser (auto-detected)
+
+# Node.js Packages (auto-installed via npm install)
+# See package.json for full list:
+# - express          (API server)
+# - puppeteer        (Chrome headless control)
+# - better-sqlite3   (job database)
+# - multer            (file uploads)
+# - cors              (cross-origin)
+# - ws                (WebSocket for live logs)
+# - uuid              (job IDs)
+# - @resvg/resvg-js  (SMIL SVG → PNG)
